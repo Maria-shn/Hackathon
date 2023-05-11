@@ -13,7 +13,7 @@ The target audience for this are NICE customers who require assistance with thei
 
 ## Technology
 
-In the demo phase we analyze fictional chat messages, using an imported library that assigns values to phrases and emojis. We use an NLP-based AI to compare the responses that generated a negative emotion in the customer in order to find patterns  to make a report with detailed analytics on how the human or bot could improve based on the texts of the customer.
+In the demo phase we analyze fictional chat messages, using an imported library that assigns values to phrases and emojis. We use an average of the values for each emotion to decide if the overall emotion per text is good or bad, we then use an AI system that gives feedback on negative communication
 
 ## Testing and Refinement
 
