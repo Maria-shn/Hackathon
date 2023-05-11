@@ -14,7 +14,7 @@ The target audience for the are NICE customers who require assistance with their
 The AI has access to a large dataset of customer messages and responses, gathered from various sources, such as customer emails, social media messages, and chat logs. The data has been preprocessed to remove noise and irrelevant information.
 
 ## Technology
-
+(TO BE EDITED!!!)
 The chatbot has been built using Python and the TensorFlow framework for NLP. The model has been trained using machine learning algorithms and hyperparameters to ensure accurate interpretation and response to customer inquiries.
 
 ## Testing and Refinement
@@ -23,7 +23,7 @@ We hope to thoroughly test the AI to ensure accurate interpretation of customer-
 
 ## Integration with Other NICE Services
 
-As an additional challenge, the AI can bee integrated with other NICE services and products, such as voice recognition, video support, and AI for personalization. This has resulted in a more comprehensive and effective customer service solution.
+As an additional challenge, the AI can bee integrated with other NICE services and products, such as voice recognition, video support, and AI for personalization. This will result in a more comprehensive and effective customer service solution.
 
 ## Contributors
 
