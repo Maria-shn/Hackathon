@@ -1,30 +1,27 @@
-# NICE AI
+# Feel NICE
 
-This is a project for the RU hackathon, aimed at implementing an AI to improve customer service and support. The AI is designed to understand, process and respond to customer inquiries in a natural, conversational way, using natural language processing (NLP) technology. The AI will create a detailed report based on a written conversation between a client and an agent and will send it to a database if no similar reports already exist. Thus the new data developed by the AI can be used by implemented chatbots for similar customer enquiries in the future. 
+This is a project for the RU hackathon, aimed at implementing an algorithm which will analyze a customer's emotion while texting with a customer service representative or with a BOT. The algorithm is designed to signal the escalations of emotions at the end of the conversation, through a report. This is a tool for improvement for the automatic service representative (BOT) but also for human representatives who talk with customers through text.
 
 ## Target Audience and Use Cases
 
-The target audience for the are NICE customers who require assistance with their products or services. The AI will be used to address specific use cases, such as:
+The target audience for this are NICE customers who require assistance with their customer assistance for products or services, especially those that have a target audience of young adults aged 18-30. The algorithm will analyze text messages from issues such as:
 
 - Product support
 - Billing inquiries
 - Technical issues
-- Data
 
-The AI has access to a large dataset of customer messages and responses, gathered from various sources, such as customer emails, social media messages, and chat logs. The data has been preprocessed to remove noise and irrelevant information.
 
 ## Technology
-(TO BE EDITED!!!)
-We are going to use OpenAI's API for language models to generate a report based on the conversation between the customer and agent
-(The chatbot has been built using Python and the TensorFlow framework for NLP. The model has been trained using machine learning algorithms and hyperparameters to ensure accurate interpretation and response to customer inquiries.)
+
+In the demo phase we analyze fictional chat messages, using an imported library that assigns values to phrases and emojis. We use an NLP-based AI to compare the responses that generated a negative emotion in the customer in order to find patterns  to make a report with detailed analytics on how the human or bot could improve based on the texts of the customer.
 
 ## Testing and Refinement
 
-We hope to thoroughly test the AI to ensure accurate interpretation of customer-agent conversations. Feedback will be collected from users to refine and improve the AI's performance.
+We hope to thoroughly test the algorithm to ensure accurate interpretation of customer-agent conversations. Feedback will be collected from users to refine and improve the algorithm's performance.
 
 ## Integration with Other NICE Services
 
-As an additional challenge, the AI can bee integrated with other NICE services and products, such as voice recognition, video support, and AI for personalization. This will result in a more comprehensive and effective customer service solution.
+As an additional challenge, the algorithm can be integrated with other NICE services and products, as NICE offers a platform to improve the customer service representatives when when talking to customers, our program could help NICE's clients' bots and customer service representatives that work based on text.
 
 ## Contributors
 
