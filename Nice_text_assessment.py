@@ -1,4 +1,5 @@
 # pip install nrclex
+import openai
 import spacy
 from nltk.metrics import edit_distance
 from nltk.tokenize import word_tokenize
@@ -29,21 +30,48 @@ def calculate_emotion_finish_score(emotion_scores):
             pos += emotion_scores[emotion]
 
     if (pos == 0):
-        return 1
+        if (neg != 0):
+            return 1
+        else:
+            return 0
     else:
         return (neg/pos)
 
 
 def main():
+
     client_answers = []
+
     agent_answers = []
+    current_role = None
+
     with open('conversation_sample.txt', 'r') as file:
         for line in file:
             role, answer = line.strip().split(": ", 1)
+
             if role == "Client":
-                client_answers.append(answer)
+                if current_role != "Client":
+                    client_answers.append(answer)
+                else:
+                    client_answers[-1] += " " + answer
+                current_role = "Client"
+
             elif role == "Agent":
-                agent_answers.append(answer)
+                if current_role != "Agent":
+                    agent_answers.append(answer)
+                else:
+                    agent_answers[-1] += " " + answer
+                current_role = "Agent"
+
+
+# Print the client and agent answers
+    for i in range(len(client_answers)):
+        print("Iteration", i+1)
+        print("Client answer:", client_answers[i])
+        if i < len(agent_answers):
+            print("Agent answer:", agent_answers[i])
+        print()
+
 # Print the client and agent answers for each iteration
     for i in range(len(client_answers)):
         print("Iteration", i+1)
@@ -66,9 +94,48 @@ def main():
             client_emotions[client_answers[i]])
         print("client emotions finished scores: ",
               client_emotions_finished_scores[client_answers[i]])
+    bad_ans = []
+    threshold = 0.5
+    for i in range(len(client_emotions_finished_scores)):
+        if (client_emotions_finished_scores[client_answers[i]] >= threshold):
+            bad_ans.append(agent_answers[i-1])
+
+    for i in range(len(bad_ans)):
+        print(bad_ans[i])
+
+    finished_avg = 0
+    for i in range(len(client_answers)):
+        if (i != 0):
+            if (calculate_emotion_finish_score(client_emotions[client_answers[i]]) >= 0.5):
+                finished_avg += 1
+            else:
+                finished_avg -= 1
+
+    if (finished_avg < 0):
+        api_using(agent_answers)
 
 
 main()
+openai.api_key = "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"
+
+
+def api_using(bad_ans):
+    prompt = "These are the answers from customer support in conversation with a client. The client left angry. Suggest how the customer support agent could improve, give examples:\n\n"
+    for i in range(len(bad_ans)):
+        prompt += bad_ans[i]
+        prompt += "\n"
+
+    model = "text-davinci-003"
+    completions = openai.Completion.create(
+        engine=model, prompt=prompt, max_tokens=2048, n=1, stop=None, temperature=0.5)
+    completions.choices[0].text
+    generated_text = completions.choices[0].text
+    sentence_list = generated_text.split('. ')
+    for sentence in sentence_list:
+        print(sentence.strip())
+#!pip install openai
+
+
 """
 # Load data dictionary (assuming it's a dictionary with sentence as key and emotion score as value)
 data_dict = {

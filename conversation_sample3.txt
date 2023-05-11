@@ -1,0 +1,23 @@
+Client: Hi, I'm calling because my package still hasn't arrived.
+
+Agent: What do you expect me to do about it? I can't control the delivery process.
+
+Client: Well, I understand that, but I'm just looking for some assistance or information regarding my package.
+
+Agent: Did you even bother to track your package? It's not my problem if you can't keep track of your own deliveries.
+
+Client: Yes, I tracked it, but it shows that it was delivered, and I never received it.
+
+Agent: Are you sure you didn't just misplace it? Maybe you should look around your house before blaming us.
+
+Client: I've already checked everywhere, and I'm certain it's not here. I just want some help in resolving this issue.
+
+Agent: Look, I don't have time for this. If you're not satisfied, you can file a complaint, but I can't guarantee anything will be done about it.
+
+Client: This is unacceptable. I expect better customer service. Can I speak to your supervisor?
+
+Agent: No, I'm the only one here, and I've already wasted enough time on this call. Is there anything else I can help you with?
+
+Client: No, thank you. I'll find another way to address this issue.
+
+In this example, the customer support agent demonstrates unhelpful and dismissive behavior, showing a lack of empathy and willingness to assist the customer.
