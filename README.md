@@ -15,7 +15,8 @@ The AI has access to a large dataset of customer messages and responses, gathere
 
 ## Technology
 (TO BE EDITED!!!)
-The chatbot has been built using Python and the TensorFlow framework for NLP. The model has been trained using machine learning algorithms and hyperparameters to ensure accurate interpretation and response to customer inquiries.
+We are going to use OpenAI's API for language models to generate a report based on the conversation between the customer and agent
+(The chatbot has been built using Python and the TensorFlow framework for NLP. The model has been trained using machine learning algorithms and hyperparameters to ensure accurate interpretation and response to customer inquiries.)
 
 ## Testing and Refinement
 
