@@ -18,29 +18,58 @@ def analyze_emotions(text):
     return emotion.affect_frequencies
 
 
-# Example usage
-text = "Hi, I'm having a problem with my computer. The screen is completely blank and I can't see anything. Can you help me?"
-emotion = analyze_emotions(text)
+def calculate_emotion_finish_score(emotion_scores):
+    neg = 0
+    pos = 0
+    for emotion in emotion_scores:
 
-# Print the emotion and its score
-for e, score in emotion.items():
-    print(f"{e}: {score}")
+        if (emotion == "anger" or emotion == "disgust" or emotion == "negative"):
+            neg += emotion_scores[emotion]
+        elif (emotion == "joy" or emotion == "positive" or "trust"):
+            pos += emotion_scores[emotion]
+
+    if (pos == 0):
+        return 1
+    else:
+        return (neg/pos)
 
 
 def main():
-    while True:
-        text = input("customer: ")
-        emotion = analyze_emotions(text)
-        for e, score in emotion.items():
-            print(f"{e}: {score}")
-        answeable = input("agent: ")
-        if answeable == "exit":
-            break
+    client_answers = []
+    agent_answers = []
+    with open('conversation_sample.txt', 'r') as file:
+        for line in file:
+            role, answer = line.strip().split(": ", 1)
+            if role == "Client":
+                client_answers.append(answer)
+            elif role == "Agent":
+                agent_answers.append(answer)
+# Print the client and agent answers for each iteration
+    for i in range(len(client_answers)):
+        print("Iteration", i+1)
+        print("Client answer:", client_answers[i])
+        if i < len(agent_answers):
+            print("Agent answer:", agent_answers[i])
+        print()
+
+    client_emotions = {}
+
+    for i in range(len(client_answers)):
+        client_emotions[client_answers[i]
+                        ] = analyze_emotions(client_answers[i])
+        print("client emotions: ", client_emotions[client_answers[i]])
+
+    client_emotions_finished_scores = {}
+
+    for i in range(len(client_answers)):
+        client_emotions_finished_scores[client_answers[i]] = calculate_emotion_finish_score(
+            client_emotions[client_answers[i]])
+        print("client emotions finished scores: ",
+              client_emotions_finished_scores[client_answers[i]])
 
 
 main()
-
-
+"""
 # Load data dictionary (assuming it's a dictionary with sentence as key and emotion score as value)
 data_dict = {
     "I am happy.": 0.8,
@@ -60,22 +89,8 @@ data_dict = {
 # Preprocess sentences (example using NLTK for tokenization and stopword removal)
 
 # Load data dictionary (assuming it's a dictionary with sentence as key and emotion score as value)
-data_dict = {
-    "I am happy.": 0.8,
-    "I am sad.": 0.2,
-    # more sentences...
-}
 
 
-# Sample data
-
-# Sample data
-
-# Sample data
-
-# Sample data
-
-# Sample data
 sentences = [
     "I am feeling happy",
     "I feel sad",
@@ -92,10 +107,10 @@ nlp = spacy.load("en_core_web_md")
 
 # Calculate similarity scores
 similarity_scores = []
-for i, sentence in enumerate(sentences):
+for i, sentence in enumerate(data_dict):
     doc1 = nlp(sentence)
     scores = []
-    for j, other_sentence in enumerate(sentences):
+    for j, other_sentence in enumerate(data_dict):
         if i != j:  # Exclude self-comparison
             doc2 = nlp(other_sentence)
             scores.append(doc1.similarity(doc2))
@@ -111,3 +126,4 @@ for i in range(5):
     print("Similarity Score:", max(sorted_sentences[i][1]))
     print("Emotion Score:", sorted_sentences[i][2])
     print()
+"""
