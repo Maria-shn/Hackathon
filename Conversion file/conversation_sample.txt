@@ -1,0 +1,16 @@
+Client: Hi, I'm having an issue with my phone.
+Agent: Okay, what seems to be the problem?
+Client: Well, my phone keeps freezing up and I can't use any of the apps.
+Agent: Did you try restarting it?
+Client: Yes, I did, but it didn't FIX the problem?!?! .
+Client: I also tried clearing the cache and deleting some apps to free up space, but that didn't work either.
+Client: I'm not sure what else to do.
+Agent: Okay, well maybe you should try a factory reset.
+Client: I don't want to do that. I have important data on my phone and I don't want to lose it.
+Agent: Well, that's the only solution I can offer you. If you don't want to try it, there's nothing else I can do.
+Client: Can't you just send someone to fix it for me?
+Agent: No, I'm sorry. We don't offer that service.
+Agent: Is there anything else I can help you with?
+Client: This is ridiculous. I paid a lot of money for this phone and it's not working properly.
+Agent: I understand your frustration, but there's nothing else I can do. Is there anything else you need help with?
+Client: No, I guess not. Thanks for nothing
