@@ -31,9 +31,9 @@ As an additional challenge, the algorithm can be integrated with other NICE serv
 - Dar Nissan (darnis18@gmail.com)
 - Mariia Shaposhnikova (maria.shn.es@gmail.com)
 
-## License
+## Link to the google collab
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+https://colab.research.google.com/drive/1nYMpxNwlxFI9WxWKG1XQ0r-M6dRK_obz?usp=sharing
 
 ## Acknowledgments
 
