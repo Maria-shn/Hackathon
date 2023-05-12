@@ -1,19 +1,10 @@
-Client: Hi, I'm calling because my package still hasn't arrived.
-
-Agent: I'm sorry to hear that. Can I please have your order number so I can look into this for you?
-
-Client: Sure, it's 12345.
-
-Agent: Thank you. It looks like your package was delivered last week. Can you confirm that you didn't receive it?
-
-Client: Yes, I'm positive that I never received it.
-
-Agent: I apologize for the inconvenience. I will file a report and initiate an investigation with the carrier to see what happened. In the meantime, would you like me to send a replacement package to you?
-
-Client: Yes, that would be great. When can I expect to receive it?
-
-Agent: I will process the replacement package today and it should be shipped out within 24 hours. You should receive it within the next 3-5 business days.
-
-Client: Thank you so much for your help.
-
-Agent: You're welcome. I'm sorry again for the inconvenience, and please don't hesitate to reach out if you have any further questions or concerns.
+Customer: Hi, I ordered a package a few days ago and I haven't received it yet. Can you help me?
+Agent: Hi there, I'd be happy to help. Can you please provide me with your order number so I can look into this for you?
+Customer: Yes, my order number is 12345.
+Agent: Thank you. I'm sorry to hear that your package hasn't arrived yet. Let me take a look at the tracking information. It looks like your package was shipped out last week and was supposed to arrive yesterday. I'm sorry for the delay.
+Customer: Yes, I was expecting it to arrive yesterday but it didn't.
+Agent: I understand how frustrating that can be. Let me check with the shipping carrier to see what's going on and when you can expect to receive your package. Can I have your shipping address, please?
+Customer: My shipping address is 123 Main Street.
+Agent: Thank you. I'm going to contact the shipping carrier right now to find out what's going on. I'll call you back within the hour to let you know what they say and to update you on the status of your package. Is that okay?
+Customer: Yes, that would be great. Thank you so much for your help.
+Agent: You're welcome. I'll be in touch shortly.
